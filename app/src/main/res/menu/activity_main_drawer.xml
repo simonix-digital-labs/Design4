@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_ac"
+            android:icon="@drawable/ic_baseline_ac_unit_24"
+            android:title="Air conditioner" />
+        <item
+            android:id="@+id/nav_light"
+            android:icon="@drawable/ic_baseline_wb_incandescent_24"
+            android:title="Lights" />
+        <item
+            android:id="@+id/nav_plug"
+            android:icon="@drawable/ic_baseline_electrical_services_24"
+            android:title="Switch plugs" />
+
+        <item
+            android:id="@+id/nav_desktop"
+            android:icon="@drawable/ic_baseline_desktop_mac_24"
+            android:title="Desktops" />
+
+        <item
+            android:id="@+id/nav_heater"
+            android:icon="@drawable/ic_baseline_emoji_food_beverage_24"
+            android:title="Water heater" />
+
+        <item
+            android:id="@+id/nav_wifi"
+            android:icon="@drawable/ic_baseline_5g_24"
+            android:title="Wifi router" />
+    </group>
+</menu>
