@@ -29,6 +29,10 @@ android {
     buildFeatures {
         viewBinding true
     }
+
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
 }
 
 dependencies {
@@ -53,4 +57,6 @@ dependencies {
     implementation "com.mikepenz:materialdrawer-nav:8.4.1"
     implementation "com.mikepenz:materialdrawer-iconics:8.4.1"
     implementation 'com.github.angads25:toggle:1.1.0'
+    implementation 'com.github.thelumiereguy:NeumorphismView-Android:1.5'
+
 }

@@ -10,8 +10,8 @@
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#f0f0f0"
         android:nestedScrollingEnabled="false"
+        android:background="@color/light_grey"
         android:scrollbars="none">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -57,9 +57,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Welcome to smarthome app"
                         android:layout_marginBottom="10dp"
-                        android:textColor="@color/white" />
+                        android:text="Welcome to smarthome app"
+                        android:textColor="@color/white"/>
 
                 </LinearLayout>
 
@@ -76,7 +76,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="16dp"
                         android:textSize="14sp"
-                        app:colorBorder="#fff"
+                        app:colorBorder="#000"
                         app:colorOn="#000"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -89,23 +89,11 @@
 
             </LinearLayout>
 
-            <RelativeLayout
-                android:layout_width="5dp"
-                android:layout_height="150dp"
-                android:background="@color/black"
-                android:alpha="0.2"
-                app:layout_constraintCircleRadius="10dp"
-                android:layout_marginBottom="180dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
                 android:gravity="center_vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -113,13 +101,14 @@
 
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
                     android:layout_width="match_parent"
-                    android:layout_height="130dp"
+                    android:layout_height="160dp"
+                    android:layout_marginRight="10dp"
                     app:cardBackgroundColor="@color/white"
                     app:cardCornerRadius="10dp"
-                    android:layout_marginRight="10dp"
+                    app:cardElevation="10dp"
                     app:cardUseCompatPadding="true"
-                    app:elevation="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
@@ -162,10 +151,10 @@
                             <com.airbnb.lottie.LottieAnimationView
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
-                                app:lottie_autoPlay="true"
                                 android:layout_marginTop="2dp"
+                                app:lottie_autoPlay="true"
                                 app:lottie_fileName="thermo.json"
-                                app:lottie_loop="true"  />
+                                app:lottie_loop="true" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -179,12 +168,12 @@
                             <com.airbnb.lottie.LottieAnimationView
                                 android:layout_width="35dp"
                                 android:layout_height="35dp"
-                                app:lottie_autoPlay="true"
-                                android:layout_marginTop="2dp"
                                 android:layout_marginLeft="10dp"
-                                app:lottie_speed="0.8"
+                                android:layout_marginTop="2dp"
+                                app:lottie_autoPlay="true"
                                 app:lottie_fileName="battery.json"
-                                app:lottie_loop="true"  />
+                                app:lottie_loop="true"
+                                app:lottie_speed="0.8" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -196,13 +185,11 @@
                                 android:textStyle="bold" />
 
 
-
                         </LinearLayout>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </androidx.cardview.widget.CardView>
-
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -211,7 +198,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -220,8 +206,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="18dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
                     android:text="Frequently used"
                     android:textColor="@color/black"
                     android:textSize="17sp"
@@ -231,30 +216,36 @@
 
             <HorizontalScrollView
                 android:id="@+id/cardview"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="20dp"
                 android:nestedScrollingEnabled="false"
                 android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom">
+                    android:layout_gravity="bottom"
+                    android:layout_margin="10dp">
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/device_water_heater"
                         android:layout_width="100dp"
                         android:layout_height="95dp"
-                        android:elevation="0dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="15dp"
                         app:cardCornerRadius="9dp"
-                        app:cardElevation="0dp">
+                        app:cardElevation="10dp">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:background="@color/black"
                             android:orientation="vertical">
 
                             <ImageView
@@ -262,8 +253,8 @@
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
                                 android:layout_margin="15.4dp"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/ic_baseline_local_fire_department_24"
+                                android:background="@drawable/shower"
+                                android:backgroundTint="@color/white"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
@@ -275,7 +266,7 @@
                                 android:layout_marginBottom="20dp"
                                 android:text="Water\nheater"
                                 android:textAlignment="center"
-                                android:textColor="#131314"
+                                android:textColor="#ffffff"
                                 android:textSize="10dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -289,18 +280,21 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="100dp"
                         android:layout_height="95dp"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="15dp"
                         android:elevation="0dp"
                         app:cardCornerRadius="9dp"
-                        app:cardElevation="0dp">
+                        app:cardElevation="10dp">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@color/black"
                             android:orientation="vertical">
 
                             <ImageView
-                                android:id="@+id/fan"
+                                android:id="@+id/imageView1"
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
                                 android:layout_margin="15.4dp"
@@ -314,40 +308,45 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
-                                android:text="Office air\nconditioner"
+                                android:layout_marginBottom="20dp"
+                                android:text="Air conditioner"
                                 android:textAlignment="center"
-                                android:textColor="#131314"
+                                android:textColor="#ffffff"
                                 android:textSize="10dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/fan" />
+                                app:layout_constraintTop_toBottomOf="@+id/imageView1" />
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                     </androidx.cardview.widget.CardView>
 
-
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/device_lights"
                         android:layout_width="100dp"
                         android:layout_height="95dp"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="15dp"
                         android:elevation="0dp"
                         app:cardCornerRadius="9dp"
-                        app:cardElevation="0dp">
+                        app:cardElevation="10dp">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@color/black"
                             android:orientation="vertical">
 
+
                             <ImageView
-                                android:id="@+id/hall"
+                                android:id="@+id/imageView2"
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
                                 android:layout_margin="15.4dp"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/ic_baseline_wb_incandescent_24"
+                                android:background="@drawable/bulb"
+                                android:backgroundTint="@color/white"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
@@ -356,17 +355,69 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
-                                android:text="Main hall\nlight"
+                                android:layout_marginBottom="20dp"
+                                android:text="Lights"
                                 android:textAlignment="center"
-                                android:textColor="#131314"
+                                android:textColor="#ffffff"
                                 android:textSize="10dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/hall" />
+                                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
+
                     </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="95dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:elevation="0dp"
+
+                        app:cardCornerRadius="9dp"
+                        app:cardElevation="10dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/black"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imageView3"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_margin="15.4dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_baseline_electrical_services_24"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="20dp"
+                                android:text="Bedroom\nplug"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textSize="10dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"></Space>
                 </LinearLayout>
             </HorizontalScrollView>
 
@@ -375,17 +426,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardview">
 
                 <TextView
+                    android:id="@+id/button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="18dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
                     android:text="View by room"
                     android:textColor="@color/black"
                     android:textSize="17sp"
@@ -395,14 +445,13 @@
 
             <HorizontalScrollView
                 android:id="@+id/cardview2"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="20dp"
                 android:nestedScrollingEnabled="true"
                 android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
 
                 <LinearLayout
@@ -412,177 +461,369 @@
                     android:gravity="bottom">
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/card_living_room"
                         android:layout_width="180dp"
-                        android:layout_height="245.9dp"
-                        android:layout_marginStart="15.4dp"
-                        android:layout_marginEnd="10dp"
+                        android:layout_height="230dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
                         android:layout_marginRight="10dp"
-                        android:layout_marginBottom="60dp"
-                        android:elevation="0dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginStart="20dp"
                         app:cardCornerRadius="9dp"
-                        app:cardElevation="0dp">
+                        app:cardElevation="10dp">
 
-                        <LinearLayout
+                        <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/txt_living_room"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="15.4dp"
-                                android:layout_marginLeft="15.4dp"
-                                android:layout_marginTop="15.4dp"
-                                android:lineSpacingExtra="2.8sp"
                                 android:text="Living room"
                                 android:textColor="#131314"
-                                android:textSize="16.2sp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginLeft="15.4dp"
-                                android:layout_marginTop="15.4dp"
-                                android:layout_marginRight="15.4dp"
-                                android:lineSpacingExtra="2.6sp"
-                                android:text="Identical Towers, Identical Wonders. Enjoy and capture the spires…"
-                                android:textColor="#8f8f8f"
-                                android:textSize="13.4sp" />
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/img_living_room" />
 
                             <ImageView
+                                android:id="@+id/img_living_room"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="15.4dp"
+                                android:layout_height="170dp"
+                                android:layout_margin="20dp"
+                                android:padding="35dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/background1" />
+                                android:src="@drawable/room"
+                                android:transitionName="shared_animation_1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
 
-                        </LinearLayout>
-
+                        </androidx.constraintlayout.widget.ConstraintLayout>
                     </androidx.cardview.widget.CardView>
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="180dp"
-                        android:layout_height="245.9dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginEnd="16.8dp"
-                        android:layout_marginRight="16.8dp"
-                        android:layout_marginBottom="60dp"
-                        android:elevation="0dp"
-                        app:cardCornerRadius="9dp"
-                        app:cardElevation="0dp">
 
-                        <LinearLayout
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_office"
+                        android:layout_width="180dp"
+                        android:layout_height="230dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="20dp"
+                        app:cardCornerRadius="9dp"
+                        app:cardElevation="10dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
                             android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/img_office"
+                                android:layout_width="wrap_content"
+                                android:layout_height="170dp"
+                                android:layout_margin="20dp"
+                                android:padding="35dp"
+                                android:transitionName="shared_animation_2"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/office"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="15.4dp"
-                                android:layout_marginLeft="15.4dp"
-                                android:layout_marginTop="15.4dp"
-                                android:lineSpacingExtra="2.8sp"
-                                android:text="Main hall"
+                                android:text="Office"
                                 android:textColor="#131314"
-                                android:textSize="16.2sp" />
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/img_office" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginLeft="15.4dp"
-                                android:layout_marginTop="15.4dp"
-                                android:layout_marginRight="15.4dp"
-                                android:lineSpacingExtra="2.6sp"
-                                android:text="Identical Towers, Identical Wonders. Enjoy and capture the spires…"
-                                android:textColor="#8f8f8f"
-                                android:textSize="13.4sp" />
-
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="15.4dp"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/background2" />
-
-                        </LinearLayout>
-
+                        </androidx.constraintlayout.widget.ConstraintLayout>
                     </androidx.cardview.widget.CardView>
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="180dp"
-                        android:layout_height="245.9dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginEnd="16.8dp"
-                        android:layout_marginRight="16.8dp"
-                        android:layout_marginBottom="60dp"
-                        android:elevation="0dp"
-                        app:cardCornerRadius="9dp"
-                        app:cardElevation="0dp">
 
-                        <LinearLayout
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_bedroom"
+                        android:layout_width="180dp"
+                        android:layout_height="230dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="20dp"
+                        app:cardCornerRadius="9dp"
+                        app:cardElevation="10dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
                             android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/img_bedroom"
+                                android:layout_width="wrap_content"
+                                android:layout_height="170dp"
+                                android:layout_margin="20dp"
+                                android:padding="25dp"
+                                android:transitionName="shared_animation_3"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/bedroom"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="15.4dp"
-                                android:layout_marginLeft="15.4dp"
-                                android:layout_marginTop="15.4dp"
-                                android:lineSpacingExtra="2.8sp"
+                                android:text="Bedroom"
+                                android:textColor="#131314"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/img_bedroom" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_kitchen"
+                        android:layout_width="180dp"
+                        android:layout_height="230dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="20dp"
+                        app:cardCornerRadius="9dp"
+                        app:cardElevation="10dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/img_kitchen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="170dp"
+                                android:layout_margin="20dp"
+                                android:padding="25dp"
+                                android:transitionName="shared_animation_3"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/kitchen"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:text="Kitchen"
                                 android:textColor="#131314"
-                                android:textSize="16.2sp" />
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/img_kitchen" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_meeting"
+                        android:layout_width="180dp"
+                        android:layout_height="230dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="20dp"
+                        app:cardCornerRadius="9dp"
+                        app:cardElevation="10dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/img_meeting"
+                                android:layout_width="wrap_content"
+                                android:layout_height="170dp"
+                                android:layout_margin="20dp"
+                                android:padding="25dp"
+                                android:transitionName="shared_animation_3"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/meeting"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginLeft="15.4dp"
-                                android:layout_marginTop="15.4dp"
-                                android:layout_marginRight="15.4dp"
-                                android:lineSpacingExtra="2.6sp"
-                                android:text="Identical Towers, Identical Wonders. Enjoy and capture the spires…"
-                                android:textColor="#8f8f8f"
-                                android:textSize="13.4sp" />
+                                android:text="Meeting room"
+                                android:textColor="#131314"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/img_meeting" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_toilet"
+                        android:layout_width="180dp"
+                        android:layout_height="230dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="20dp"
+                        app:cardCornerRadius="9dp"
+                        app:cardElevation="10dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:orientation="vertical">
 
                             <ImageView
+                                android:id="@+id/img_toilet"
+                                android:layout_width="wrap_content"
+                                android:layout_height="170dp"
+                                android:layout_margin="20dp"
+                                android:padding="25dp"
+                                android:transitionName="shared_animation_3"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/toilet"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="15.4dp"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/background3" />
-                        </LinearLayout>
+                                android:text="Toilet"
+                                android:textColor="#131314"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/img_toilet" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
                     </androidx.cardview.widget.CardView>
+
+
+
+                    <Space
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent" />
+
+
                 </LinearLayout>
             </HorizontalScrollView>
+
+            <Space
+                android:id="@+id/space"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardview2" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="30dp"
+        android:layout_height="120dp"
+        android:background="@color/black"
+        android:layout_marginTop="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimationView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="left.json"
+            app:lottie_loop="true" />
+
+        <RelativeLayout
+            android:layout_width="30dp"
+            android:layout_height="90dp"
+            android:background="@drawable/slideme"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@drawable/ic_baseline_home_24_black"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/home_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

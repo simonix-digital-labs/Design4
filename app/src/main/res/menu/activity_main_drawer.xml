@@ -10,7 +10,7 @@
             android:title="Air conditioner" />
         <item
             android:id="@+id/nav_light"
-            android:icon="@drawable/ic_baseline_wb_incandescent_24"
+            android:icon="@drawable/bulb"
             android:title="Lights" />
         <item
             android:id="@+id/nav_plug"
@@ -24,7 +24,7 @@
 
         <item
             android:id="@+id/nav_heater"
-            android:icon="@drawable/ic_baseline_emoji_food_beverage_24"
+            android:icon="@drawable/shower"
             android:title="Water heater" />
 
         <item
