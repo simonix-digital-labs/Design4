@@ -755,9 +755,9 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="30dp"
+        android:layout_width="20dp"
         android:layout_height="120dp"
-        android:background="@color/black"
+        android:background="@drawable/slide"
         android:layout_marginTop="150dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -765,23 +765,16 @@
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/lottieAnimationView"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:lottie_autoPlay="true"
             app:lottie_fileName="left.json"
             app:lottie_loop="true" />
-
-        <RelativeLayout
-            android:layout_width="30dp"
-            android:layout_height="90dp"
-            android:background="@drawable/slideme"
-            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
-            app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
-            app:layout_constraintStart_toStartOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
